@@ -1,1 +1,1 @@
-# datasci-w266-nlp-project
+# DATASCI-266-NLP-Project
