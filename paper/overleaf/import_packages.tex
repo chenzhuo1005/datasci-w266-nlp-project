@@ -1,0 +1,113 @@
+% Remove the "review" option to generate the final version.
+\usepackage{main}
+
+% Standard package includes
+\usepackage{times}
+\usepackage{latexsym}
+
+% \usepackage{hyperref}
+% \usepackage{glossaries}
+% \usepackage{latexsym}
+
+\makeatletter
+\newcommand{\printfnsymbol}[1]{%
+  \textsuperscript{\@fnsymbol{#1}}%
+}
+\makeatother
+
+% For proper rendering and hyphenation of words containing Latin characters (including in bib files)
+\usepackage[T1]{fontenc}
+% For Vietnamese characters
+% \usepackage[T5]{fontenc}
+% See https://www.latex-project.org/help/documentation/encguide.pdf for other character sets
+
+% This assumes your files are encoded as UTF8
+\usepackage[utf8]{inputenc}
+
+% This is not strictly necessary, and may be commented out.
+% However, it will improve the layout of the manuscript,
+% and will typically save some space.
+\usepackage{microtype}
+
+% This is also not strictly necessary, and may be commented out.
+% However, it will improve the aesthetics of text in
+% the typewriter font.
+\usepackage{inconsolata}
+
+
+% my package
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[capitalise]{cleveref}
+% \usepackage{lipsum}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{subfigure}
+\usepackage{stfloats}
+
+\usepackage{paralist}
+\usepackage[shortlabels]{enumitem}
+
+\usepackage{xspace}
+\newcommand*{\eg}{e.g.\@\xspace}
+\newcommand*{\ie}{i.e.\@\xspace}
+
+\newcommand{\ModelName}{EMAT\xspace}
+\newcommand{\ModelNames}{EMATs\xspace}
+\newcommand{\MemoryName}{AAMA\xspace}
+
+% 
+\newcommand{\exper}[1]{\textsc{#1}}
+\newcommand{\prefix}{\exper{Prefix}\xspace}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+% \DeclareMathOperator{\E}{\mathbb{E}}
+
+%\newcommand{\eg}{e.g.,}
+%\newcommand{\ie}{i.e.,}
+
+% Acronyms
+\usepackage{glossaries}
+\glsdisablehyper
+\newacronym{ODQA}{ODQA}{Open-Domain Question Answering}
+
+
+\newif\ifcomments
+% Comment out to disable all in-line comments.
+% \commentstrue
+
+\newcounter{psCounter}
+\newif\ifpsvar
+\ifcomments
+    \psvartrue
+\fi
+\ifpsvar
+    \newcommand{\ps}[1]{{\small \color{red} \refstepcounter{psCounter}\textsf{[PS]$_{\arabic{psCounter}}$:{#1}}}}
+\else
+    \newcommand{\ps}[1]{}
+\fi
+
+\newcounter{ywCounter}
+\newif\ifywvar
+\ifcomments
+    \ywvartrue
+\fi
+\ifpsvar
+    \newcommand{\yw}[1]{{\small \color{cyan} \refstepcounter{ywCounter}\textsf{[YW]$_{\arabic{ywCounter}}$:{#1}}}}
+\else
+    \newcommand{\yw}[1]{}
+\fi
+
+\newcounter{pmmCounter}
+\newif\ifywvar
+\ifcomments
+    \ywvartrue
+\fi
+\ifpsvar
+    \newcommand{\pmm}[1]{{\small \color{red} \refstepcounter{pmmCounter}\textsf{[PM]$_{\arabic{pmmCounter}}$:{#1}}}}
+\else
+    \newcommand{\pmm}[1]{}
+\fi

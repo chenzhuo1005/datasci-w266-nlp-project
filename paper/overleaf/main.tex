@@ -1,0 +1,51 @@
+% This must be in the first 5 lines to tell arXiv to use pdfLaTeX, which is strongly recommended.
+\pdfoutput=1
+% In particular, the hyperref package requires pdfLaTeX in order to break URLs across lines.
+
+\documentclass[11pt]{article}
+
+\input{import_packages}
+
+\title{Retrieval-Augmented Generation for Enhancing Open-Domain Question Answering Systems with External Knowledge}
+
+\author{
+  Zhuo Chen \\
+  University of California, Berkeley \\
+  { \normalsize \tt  zhuochen@berkeley.edu} \\
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+\input{introduction}
+
+\input{project_overview}
+
+\input{experiments}
+
+\input{results}
+
+\input{conclusions}
+
+\input{limitations}
+
+\input{future_works}
+
+\clearpage
+
+% Entries for the entire Anthology, followed by custom entries
+\bibliography{references}
+\bibliographystyle{acl_natbib}
+
+\clearpage
+
+\appendix
+
+\input{appendix}
+
+
+\end{document}

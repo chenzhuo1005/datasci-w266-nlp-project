@@ -1,0 +1,56 @@
+\section{Prompt Engineering}\label{sec:prompt_engineering}
+
+\textbf{Flan-T5-base, Flan-T5-large}: \\
+\texttt{Answer the following question:} \\
+\texttt{<question>} \\
+
+\noindent \textbf{Flan-T5-base+RAG, Flan-T5-large+RAG}: \\
+\noindent \texttt{Given the below context:} \\
+
+\noindent \texttt{The context is a list of questions and answers pairs that could be used to answer the questions.} \\
+
+\noindent \texttt{"""}
+
+\texttt{<question>:<answer>}
+
+\texttt{<question>:<answer>}
+
+\texttt{<question>:<answer>}
+
+\texttt{<question>:<answer>}
+
+\texttt{<question>:<answer>}
+
+\texttt{<question>:<answer>}
+
+\texttt{<question>:<answer>}
+
+\texttt{...}
+
+\noindent \texttt{"""} \\
+
+\noindent \texttt{Answer the following question:} \\
+\noindent \texttt{<question>} \\
+
+\noindent \textbf{Llama-2-13B-chat, GPT-3.5-Turbo}: \\
+\texttt{[INST]} \\
+\texttt{<<SYS>>} \\
+\texttt{This is a Open Domain Question Answering Task. You are given a question and you need to generate the short answer based on the question. Below are a few examples:} \\ \\
+\texttt{Question: where did they film hot tub time machine?} \\
+\texttt{Answer: Fernie Alpine Resort} \\
+\texttt{Question: who has the right of way in international waters?} \\
+\texttt{Answer: Neither vessel} \\
+\texttt{Question: who does annie work for attack on titan?} \\
+\texttt{Answer: Marley}
+\texttt{Question: when was the immigration reform and control act passed?} \\
+\texttt{Answer: November 6, 1986} \\
+\texttt{[ENDSYS]} \\
+\texttt{<</SYS>>} \\
+\texttt{Question: {prompt}} \\
+\texttt{[/INST]} \\
+
+\noindent \textbf{Llama-2-13B-chat+RAG}: \\
+\noindent \textbf{GPT-3.5-Turbo+RAG}: \\
+Not applicable, since LlamaIndex API is used and the corresponding retrieved answers and scores will be passed to its API for generation.
+
+\input{tables/cases}

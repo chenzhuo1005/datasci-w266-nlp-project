@@ -1,0 +1,21 @@
+\begin{table}
+\renewcommand\arraystretch{1.2} 
+\setlength\tabcolsep{4pt}
+\centering
+\resizebox{\columnwidth}{!}{
+    \begin{tabular}{ll}
+    \toprule
+    \multicolumn{2}{c}{\textbf{Natural Question (\emph{PAQ})}} \\ \midrule
+    \textbf{Q}: where is conan meriadoc from? & \textbf{A}: \emph{british} \\ \midrule
+    \multicolumn{2}{l}{\textbf{Retrieved Key-Values}} \\
+    \textbf{Q}: who is conan meriadoc mentioned alongside in & \textbf{A}: cadwaladr \\ armes prydein? \\
+    \textbf{Q}: who argued that conan meriadoc dates back to  & \textbf{A}: hubert guillotelr \\ the mid 12th century? \\
+    \textbf{Q}: conan meriadoc was the roman name for whom? & \textbf{A}: magnus maximus \\
+    \textbf{Q}: who is the compiler of conan meriadoc? & \textbf{A}: gurheden \\
+    \textbf{Q}: what nationality was conan meriadoc? & \textbf{A}: \underline{\emph{british}} \\
+    \bottomrule
+    \end{tabular}
+}
+    \caption{Example question from \emph{PAQ} and its associated answer, along with the top-5 question-answer pairs retrieved from the vector store by similarity search.}
+    \label{tab:paq_with_scores}
+\end{table}

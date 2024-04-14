@@ -1,0 +1,80 @@
+\begin{table*}
+\renewcommand\arraystretch{1.2} 
+\setlength\tabcolsep{4pt}
+\small
+\centering
+\resizebox{\textwidth}{!}{
+    \begin{tabular}{ll}
+    \toprule
+    \multicolumn{2}{c}{\textbf{Natural Questions (\emph{nq\_open})}} \\ \midrule
+    
+    \textbf{Question} & when was the last time anyone was on the moon? \\
+    \textbf{Answer} & [ \emph{"14 December 1972 UTC", "December 1972"} ] \\
+    \textbf{Flan-T5-base}: & \emph{1969 \textcolor{red}{(False)}} \\
+    \textbf{Flan-T5-base+RAG}: & \emph{14 November 2016 \textcolor{red}{(False)}} \\
+    \textbf{Flan-T5-large}: & \emph{December 1972 \textcolor{teal}{(True)}} \\
+    \textbf{Flan-T5-large+RAG}: & \emph{Apollo 17 \textcolor{red}{(False)}} \\
+    \textbf{Llama-2-13B-chat-GGUF}: & \emph{December 1972 \textcolor{teal}{(True)}} \\
+    \textbf{Llama-2-13B-chat-GGUF+RAG}: & \emph{2017 \textcolor{red}{(False)}} \\
+    \textbf{GPT-3.5-Turbo-0125}: & \emph{The last time anyone was on the moon \textcolor{red}{(False)}} \\
+    \textbf{GPT-3.5-Turbo-0125+RAG}: & \emph{The last time anyone was on the moon was during \textcolor{red}{(False)}} \\
+    
+    \midrule
+    
+    \textbf{Question} & who wrote he ain't heavy he's my brother lyrics	? \\
+    \textbf{Answer} & [ \emph{"Bobby Scott", "Bob Russell"} ] \\
+    \textbf{Flan-T5-base}: & \emph{Bobby Mccartney \textcolor{red}{(False)}} \\
+    \textbf{Flan-T5-base+RAG}: & \emph{Bobby Scott \textcolor{teal}{(True)}} \\
+    \textbf{Flan-T5-large}: & \emph{John Lennon \textcolor{red}{(False)}} \\
+    \textbf{Flan-T5-large+RAG}: & \emph{Bobby Scott \textcolor{teal}{(True)}} \\
+    \textbf{Llama-2-13B-chat-GGUF}: & \emph{Bobby Scott \textcolor{teal}{(True)}} \\
+    \textbf{Llama-2-13B-chat-GGUF+RAG}: & \emph{Bobby Scott \textcolor{teal}{(True)}} \\
+    \textbf{GPT-3.5-Turbo-0125}: & \emph{Bobby Scott \textcolor{teal}{(True)}} \\
+    \textbf{GPT-3.5-Turbo-0125+RAG}: & \emph{Bobby Scott \textcolor{teal}{(True)}} \\
+    
+    \midrule
+    
+    \textbf{Question} & how many seasons of the bastard executioner are there? \\
+    \textbf{Answer} & [ \emph{"one", "one season"} ] \\
+    \textbf{Flan-T5-base}: & \emph{three \textcolor{red}{(False)}} \\
+    \textbf{Flan-T5-base+RAG}: & \emph{two \textcolor{red}{(False)}} \\
+    \textbf{Flan-T5-large}: & \emph{6 \textcolor{red}{(False)}} \\
+    \textbf{Flan-T5-large+RAG}: & \emph{26 \textcolor{red}{(False)}} \\
+    \textbf{Llama-2-13B-chat-GGUF}: & \emph{one \textcolor{teal}{(True}} \\
+    \textbf{Llama-2-13B-chat-GGUF+RAG}: & \emph{2 \textcolor{red}{(False)}} \\
+    \textbf{GPT-3.5-Turbo-0125}: & \emph{one \textcolor{teal}{(True)}} \\
+    \textbf{GPT-3.5-Turbo-0125+RAG}: & \emph{two \textcolor{red}{(False)}} \\
+    
+    \midrule
+    
+    \textbf{Question} & when did the eagles win last super bowl? \\
+    \textbf{Answer} & [ \emph{"2017"} ] \\
+    \textbf{Flan-T5-base}: & \emph{Super Bowl XXX \textcolor{red}{(False)}} \\
+    \textbf{Flan-T5-base+RAG}: & \emph{2007 \textcolor{red}{(False)}} \\
+    \textbf{Flan-T5-large}: & \emph{2017 \textcolor{teal}{(True)}} \\
+    \textbf{Flan-T5-large+RAG}: & \emph{2017 \textcolor{teal}{(True)}} \\
+    \textbf{Llama-2-13B-chat-GGUF}: & \emph{The Eagles won their last Super Bowl in 2018 \textcolor{red}{(False)}} \\
+    \textbf{Llama-2-13B-chat-GGUF+RAG}: & \emph{2017 \textcolor{teal}{(True)}} \\
+    \textbf{GPT-3.5-Turbo-0125}: & \emph{The Philadelphia Eagles won their last Super Bowl \textcolor{red}{(False)}} \\
+    \textbf{GPT-3.5-Turbo-0125+RAG}: & \emph{2017 \textcolor{teal}{(True)}} \\
+    
+    \midrule
+    
+    \textbf{Question} & who won last year's ncaa women's basketball? \\
+    \textbf{Answer} & [ \emph{"South Carolina"} ] \\
+    \textbf{Flan-T5-base}: & \emph{North Carolina \textcolor{red}{(False)}} \\
+    \textbf{Flan-T5-base+RAG}: & \emph{Tennessee \textcolor{red}{(False)}} \\
+    \textbf{Flan-T5-large}: & \emph{Michigan State Spartans \textcolor{red}{(False)}} \\
+    \textbf{Flan-T5-large+RAG}: & \emph{South Carolina \textcolor{teal}{(True)}} \\
+    \textbf{Llama-2-13B-chat-GGUF}: & \emph{Baylor Lady Bears \textcolor{red}{(False)}} \\
+    \textbf{Llama-2-13B-chat-GGUF+RAG}: & \emph{South Carolina \textcolor{teal}{(True)}} \\
+    \textbf{GPT-3.5-Turbo-0125}: & \emph{Stanford University \textcolor{red}{(False)}} \\
+    \textbf{GPT-3.5-Turbo-0125+RAG}: & \emph{South Carolina \textcolor{teal}{(True)}} \\
+    & \phantom{question: how long does it take a whale shark to mature? answer: around 30 years} \\
+
+    \bottomrule
+    \end{tabular}
+}
+    \caption{More examples of LLMs' prediction on \emph{nq\_open}.}
+    \label{tab:cases}
+\end{table*}

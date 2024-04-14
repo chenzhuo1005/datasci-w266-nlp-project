@@ -1,0 +1,27 @@
+\begin{table}
+\centering
+% \setlength{\tabcolsep}{5pt}
+\resizebox{\columnwidth}{!}{
+    \begin{tabular}{lcccc}
+    \toprule
+    \textbf{Model}
+     & \textbf{EM} & \textbf{F1} & \textbf{Rouge1} & \textbf{RougeL} \\
+    \midrule
+    Flan-T5-base & 4.52 & 7.84 & 5.78 & 5.78 \\
+    Flan-T5-base+RAG & \bf{27.59} & \bf{32.27} & \bf{24.65} & \bf{24.61} \\
+    \midrule
+    Flan-T5-large & 8.45 & 12.63 & 9.72 & 9.72\\
+    Flan-T5-large+RAG & \bf{35.48} & \bf{39.95} & \bf{30.48} & \bf{30.5} \\
+    \midrule
+    Llama-2-13B-chat-GGUF & 35.96 & 40.16 & 30.4 & 30.22\\
+    Llama-2-13B-chat-GGUF+RAG & \bf{37.62} & \bf{40.73} & \bf{30.97} & \bf{30.95} \\
+    \midrule
+    GPT-3.5-Turbo-0125 & 34.07 & 39.02 & 30.99 & 30.82 \\
+    GPT-3.5-Turbo-0125+RAG & \bf{37.89} & \bf{42.64} & \bf{33.01} & \bf{32.91} \\
+    \bottomrule
+    \end{tabular}
+}
+\caption{\emph{Exact Match (EM)}, \emph{F1} and \emph{Rouge Scores} results in comparison of models: \emph{Flan-T5-base}, \emph{Flan-T5-large}, \emph{Llama-2-13B-chat-GGUF} and \emph{GPT-3.5-Turbo} with/without RAG enhancement.
+}
+\label{tab:rag_results}
+\end{table}
