@@ -1,7 +1,7 @@
 # DATASCI 266 NLP Project
 
 ## Introduction
-This project explores the impact of retrieval-augmented generation on the performance of large language models (LLMs) in Open Domain Question Answering (ODQA). Our approach incorporates an external knowledge augmentation system using the PAQ dataset, which provides LLMs like Flan-T5 and Llama-2-13B with real-time access to over 1.4 million question-answer pairs. This system allows dynamic retrieval of pertinent information, addressing the inherent limitations of LLMs related to fixed knowledge bases and context length constraints. We assess the enhancement in accuracy with metrics such as Exact Match (EM), F1, and Rouge scores. Our findings show that retrieval-augmented techniques notably enhance the quality of answers across various LLMs (e.g., an increase from 8.45 to 35.48 EM on Flan-T5-large), underscoring the potential of integrating these systems to augment the capabilities and applicability of traditional neural language models in complex question-answering tasks.
+This project explores the impact of retrieval-augmented generation on the performance of large language models (LLMs) in Open Domain Question Answering (ODQA). Our approach incorporates an external knowledge augmentation system using the PAQ dataset, which provides LLMs like Flan-T5 and Llama-2-13B with real-time access to over 14 million question-answer pairs. This system allows dynamic retrieval of pertinent information, addressing the inherent limitations of LLMs related to fixed knowledge bases and context length constraints. We assess the enhancement in accuracy with metrics such as Exact Match (EM), F1, and Rouge scores. Our findings show that retrieval-augmented techniques notably enhance the quality of answers across various LLMs (e.g., an increase from 8.45 to 35.48 EM on Flan-T5-large), underscoring the potential of integrating these systems to augment the capabilities and applicability of traditional neural language models in complex question-answering tasks.
 
 ## Research Paper
 
@@ -14,7 +14,7 @@ The research paper associated with this project, titled "Retrieval-Augmented Gen
 
 ## Datasets
 ### RAG Knowledge Source: PAQ-L1
-The primary dataset used as a knowledge source in our retrieval-augmented generation system is PAQ-L1, which consists of over 1.4 million automatically generated question-answer pairs. It is designed to provide a comprehensive and diverse set of data points to support and enhance the retrieval capabilities of our models.
+The primary dataset used as a knowledge source in our retrieval-augmented generation system is PAQ-L1, which consists of over 14 million automatically generated question-answer pairs. It is designed to provide a comprehensive and diverse set of data points to support and enhance the retrieval capabilities of our models.
 
 - **Access the dataset**: [PAQ Dataset](https://github.com/facebookresearch/PAQ) [PAQ-L1 Dataset Download](https://dl.fbaipublicfiles.com/paq/v1/PAQ_L1.tar.gz)
 - **Preprocessing Steps**: Before integration, the dataset undergoes cleaning to remove any duplicates and formatting errors. The data is then indexed using an efficient search algorithm to facilitate rapid retrieval during the question-answering process.
